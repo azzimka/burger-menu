@@ -23,7 +23,7 @@
       }
 
       .burger span {
-        display: block;
+        display: inline-block;
         width: 25px;
         height: 3px;
         background-color: black;
@@ -31,13 +31,18 @@
         border-radius: 1.5px;
       }
 
+      nav {
+        transition: 0.5s;
+      }
+
       @media (max-width: 768px) {
         .burger{
             display: flex;
+            border: solid;
         }
 
         nav {
-            display: none;
+            display: flex;
 
             flex-direction: column;
             position: absolute;
@@ -49,6 +54,18 @@
             text-align: center;
             gap: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+            /* top: -300px;  */
+            opacity: 0;
+            transition: 0.4s;
+            pointer-events: none;
+        }
+
+        nav.active {
+            top: 80px;
+            opacity: 1;
+            pointer-events: auto;
         }
 
         .burger.active span:nth-child(1){
@@ -60,11 +77,12 @@
         }
 
         .burger.active span:nth-child(3){
-            transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) ;
         }
 
         nav.active {
             display: flex;
+            transition: 0.5s;
         }
       }
     </style>
@@ -73,11 +91,11 @@
     <header>
       <h1>LOGO</h1>
       <nav>
-        <a href="">......</a>
-        <a href="">......</a>
-        <a href="">......</a>
-        <a href="">......</a>
-        <a href="">......</a>
+        <a href="https://prezi-monday.vercel.app/month-1/lesson-12/lesson-12.html">......</a>
+        <a href="https://prezi-monday.vercel.app/month-1/lesson-12/lesson-12.html">......</a>
+        <a href="https://prezi-monday.vercel.app/month-1/lesson-12/lesson-12.html">......</a>
+        <a href="https://prezi-monday.vercel.app/month-1/lesson-12/lesson-12.html">......</a>
+        <a href="https://prezi-monday.vercel.app/month-1/lesson-12/lesson-12.html">......</a>
       </nav>
 
       <div class="btns">
@@ -102,4 +120,3 @@
     </script>
   </body>
 </html>
-  
